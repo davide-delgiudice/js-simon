@@ -61,8 +61,22 @@ const timer = setInterval(() => {
     }
 }, 1000);
 
-
+// aggiungo una funzione al click del bottone
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    
+
+    // dichiaro un array vuoto che dovrà contenere i numeri indovinati dall'utente
+    const guessNumbers = [];
+
+    // ciclo i valori inseriti in input dall'utente
+    for (i=0; i<input.lenght; i++){
+        const inputNumbers = input[i];
+
+        const value = parseInt(inputNumbers.value);
+
+        // inserisco il numero nell'array vuoto
+        guessNumbers.push(value)
+    }
+
+
 })
