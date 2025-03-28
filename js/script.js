@@ -29,11 +29,11 @@ const generateRandomNumbers = (min, max, total) => {
     return rNumbers;
 }
 
-// stampo la funzione
-console.log(generateRandomNumbers(1, 50, 5));
-
 // evoco la funzione
 const rNumbers = generateRandomNumbers(min, max, totalNumbers);
+
+// stampo la funzione
+console.log(numbers);
 
 // assegno i numeri randomici ad una list item
 for(let i=0; i<rNumbers.lenght; i++){
@@ -47,3 +47,6 @@ numberList.innerHTML = li;
 countdown.innerText = seconds;
 
 // creo una funzione per startare il countdown
+const timer = setInterval(() => {
+    countdown.innerText = --seconds;
+}, 1000);
