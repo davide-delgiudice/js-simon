@@ -20,10 +20,13 @@ const generateRandomNumbers = (min, max, total) => {
 
     // genero i 5 numeri casuali
     for(let i=0; i<total; i++){
-        const num = Math.floor(Math.random() * (max - min + 1) + min);
+        const num = Math.floor(Math.random() * (max - min + 1)) + min;
         // inserisco il numer generato randomicamente nell'array vuoto
         rNumbers.push(num);
     }
 
     return rNumbers;
 }
+
+// evoco la funzione
+console.log(generateRandomNumbers(1, 50, 5));
