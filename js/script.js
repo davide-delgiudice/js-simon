@@ -94,5 +94,11 @@ button.addEventListener('click', (event) => {
         // visualizzo il risultato e rimuovo il colore
         message.classList.remove('text-danger');
     
-
+        // comparazione della lunghezza dell'array uguale al numero totale di elementi
+        if(guess.length === totalNumbers){
+            // aggiungo un altro colore
+            message.classList.add('text-success');
+        }
+    
+        message.innerText = `Hai indovinato ${guess.lenght} elementi (${guess})`;
 })
