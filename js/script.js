@@ -28,5 +28,9 @@ const generateRandomNumbers = (min, max, total) => {
     return rNumbers;
 }
 
-// evoco la funzione
+// stampo la funzione
 console.log(generateRandomNumbers(1, 50, 5));
+
+// evoco la funzione
+const rNumbers = generateRandomNumbers(min, max, totalNumbers);
+
