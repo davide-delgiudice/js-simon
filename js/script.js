@@ -60,3 +60,9 @@ const timer = setInterval(() => {
         instructions.innerText = 'Inserisci i valori che ricordi (Anche in ordine casuale)';
     }
 }, 1000);
+
+
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+})
