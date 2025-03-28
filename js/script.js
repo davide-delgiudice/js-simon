@@ -11,7 +11,7 @@ const button = document.querySelector('button');
 const min = 1;
 const max = 50;
 const totalNumbers = 5;
-const timer = 30;
+let seconds = 30;
 let li = "";
 
 // creo una funzione che mi generi dei numeri casuali
@@ -42,3 +42,8 @@ for(let i=0; i<rNumbers.lenght; i++){
 
 // inserisco la list item nel DOM
 numberList.innerHTML = li;
+
+// inserisco il countdown nel DOM
+countdown.innerText = seconds;
+
+// creo una funzione per startare il countdown
