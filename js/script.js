@@ -49,4 +49,14 @@ countdown.innerText = seconds;
 // creo una funzione per startare il countdown
 const timer = setInterval(() => {
     countdown.innerText = --seconds;
+
+    if (seconds === 0){
+        // rimuovo la funzione setInterval
+        clearInterval(timer);
+        // rimuovo la classe display none nel form
+        form.classList.remove('d-none');
+        // aggiungo la classe display none alla unordered list
+        numberList.classList.add('d-none');
+        instructions.innerText = 'Inserisci i valori che ricordi (Anche in ordine casuale)';
+    }
 }, 1000);
