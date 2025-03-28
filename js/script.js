@@ -11,8 +11,8 @@ const button = document.querySelector('button');
 const min = 1;
 const max = 50;
 const totalNumbers = 5;
-let seconds = 30;
-let li = "";
+let seconds = 3;
+let li = '';
 
 // creo una funzione che mi generi dei numeri casuali
 const generateRandomNumbers = (min, max, total) => {
@@ -30,14 +30,14 @@ const generateRandomNumbers = (min, max, total) => {
 }
 
 // evoco la funzione
-const rNumbers = generateRandomNumbers(min, max, totalNumbers);
+rNumbers = generateRandomNumbers(min, max, totalNumbers);
 
 // stampo la funzione
-console.log(numbers);
+console.log(rNumbers);
 
 // assegno i numeri randomici ad una list item
-for(let i=0; i<rNumbers.lenght; i++){
-    li += `<li>${numbers[i]}</li>`
+for(let i=0; i<rNumbers.length; i++){
+    li += `<li>${rNumbers[i]}</li>`
 }
 
 // inserisco la list item nel DOM
@@ -69,7 +69,7 @@ button.addEventListener('click', (event) => {
     const userNumbers = [];
 
     // ciclo i valori inseriti in input dall'utente
-    for (i=0; i<input.lenght; i++){
+    for (let i=0; i<input.length; i++){
         const inputNumbers = input[i];
 
         const value = parseInt(inputNumbers.value);
@@ -78,27 +78,27 @@ button.addEventListener('click', (event) => {
         userNumbers.push(value)
     }
 
-        // dichiaro un array vuoto che dovrà contenere i numeri indovinati dall'utente
-        const guess = [];
+    // dichiaro un array vuoto che dovrà contenere i numeri indovinati dall'utente
+    const guess = [];
 
-        // ciclo l'array con i numeri casuali
-        for (i=0; i<userNumbers.lenght; i++){
-            const num = userNumbers[i];
+    // ciclo l'array con i numeri casuali
+    for (let i=0; i<userNumbers.length; i++){
+        const num = userNumbers[i];
     
-            // verifico che il numero dell'utente, che sto attualmente ciclando, sia presente nell'array dei numeri generati casualmente
-            if(numbers.includes(num)){
-                guess.push(num);
-            }
+        // verifico che il numero dell'utente, che sto attualmente ciclando, sia presente nell'array dei numeri generati casualmente
+        if(rNumbers.includes(num)){
+            guess.push(num);
         }
+    }
         
-        // visualizzo il risultato e rimuovo il colore
-        message.classList.remove('text-danger');
+    // visualizzo il risultato e rimuovo il colore
+    message.classList.remove('text-danger');
     
-        // comparazione della lunghezza dell'array uguale al numero totale di elementi
-        if(guess.length === totalNumbers){
-            // aggiungo un altro colore
-            message.classList.add('text-success');
-        }
+    // comparazione della lunghezza dell'array uguale al numero totale di elementi
+    if(guess.length === totalNumbers){
+        // aggiungo un altro colore
+        message.classList.add('text-success');
+    }
     
-        message.innerText = `Hai indovinato ${guess.lenght} elementi (${guess})`;
+    message.innerText = `Hai indovinato ${guess.length} elementi ${guess}`;
 })
