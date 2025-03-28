@@ -6,3 +6,9 @@ const numbers = document.getElementById('numbers-list');
 const message = document.getElementById('message');
 const instructions = document.getElementById('instructions');
 const button = document.querySelector('button');
+
+// definizione delle variabili
+const min = 1;
+const max = 50;
+const totalNumbers = 5;
+const timer = 30;
