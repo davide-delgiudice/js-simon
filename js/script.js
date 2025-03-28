@@ -39,3 +39,6 @@ const rNumbers = generateRandomNumbers(min, max, totalNumbers);
 for(let i=0; i<rNumbers.lenght; i++){
     li += `<li>${numbers[i]}</li>`
 }
+
+// inserisco la list item nel DOM
+numberList.innerHTML = li;
