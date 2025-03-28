@@ -78,8 +78,18 @@ button.addEventListener('click', (event) => {
         userNumbers.push(value)
     }
 
-    // dichiaro un array vuoto che dovrà contenere i numeri indovinati dall'utente
-    const guess = [];
+        // dichiaro un array vuoto che dovrà contenere i numeri indovinati dall'utente
+        const guess = [];
 
+        // ciclo l'array con i numeri casuali
+        for (i=0; i<userNumbers.lenght; i++){
+            const num = userNumbers[i];
+    
+            // verifico che il numero dell'utente, che sto attualmente ciclando, sia presente nell'array dei numeri generati casualmente
+            if(numbers.includes(num)){
+                guess.push(num);
+            }
+        }
+    
 
 })
