@@ -90,6 +90,9 @@ button.addEventListener('click', (event) => {
                 guess.push(num);
             }
         }
+        
+        // visualizzo il risultato e rimuovo il colore
+        message.classList.remove('text-danger');
     
 
 })
