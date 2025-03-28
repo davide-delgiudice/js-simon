@@ -12,6 +12,7 @@ const min = 1;
 const max = 50;
 const totalNumbers = 5;
 const timer = 30;
+let li = "";
 
 // creo una funzione che mi generi dei numeri casuali
 const generateRandomNumbers = (min, max, total) => {
@@ -34,3 +35,7 @@ console.log(generateRandomNumbers(1, 50, 5));
 // evoco la funzione
 const rNumbers = generateRandomNumbers(min, max, totalNumbers);
 
+// assegno i numeri randomici ad una list item
+for(let i=0; i<rNumbers.lenght; i++){
+    li += `<li>${numbers[i]}</li>`
+}
